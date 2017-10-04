@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ $section := where .Data.Pages "Section" .Section }}
+  <section>
+      <div class="container">
+          <div class="row">
+              <div class="masonry">
+                  <div class="masonry__container masonry--active">
+                    {{ range $section }}
+                      {{ partial "gallery-tile.html" . }}
+                    {{ end }}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+{{ end }}
