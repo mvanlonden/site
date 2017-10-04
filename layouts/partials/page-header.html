@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                  {{.Title}}
+                  <small class="text-muted text-uppercase">{{.Params.company}}</small>
+                </h1>
+                <ol class="breadcrumbs">
+                  {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
+                </ol>
+                <hr>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>

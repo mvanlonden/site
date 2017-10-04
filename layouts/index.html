@@ -1,0 +1,101 @@
+{{ define "main"}}
+  <section class="cover unpad--bottom switchable bg--secondary text-center-xs">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-5 mt--3">
+                  <h1> {{.Title}}</h1>
+                  <p class="lead">{{.Params.tagline}}</p>
+                  <a class="btn btn--primary type--uppercase inner-link" href="#contact" target="_self"> <span class="btn__text">contact&nbsp;</span> </a> </div>
+              <div class="col-sm-6"> <img alt="Mel" src="{{.Params.profile_image}}"> </div>
+          </div>
+      </div>
+  </section>
+  <section>
+      <div class="container">
+          <div class="row">
+              <div class="masonry">
+                  <div class="masonry__container masonry--active">
+                      {{ range where .Data.Pages "Section" "project" }}
+                        <div class="masonry__item col-sm-6 text-center filter-print" data-masonry-filter="Print">
+                            <div class="project-thumb">
+                                <a href="{{.Permalink}}"> <img alt="{{.Title}}" class="border--round" src="{{.Params.image}}"> </a>
+                                <h4>{{.Title}}</h4> <span>{{.Params.company}}</span> </div>
+                        </div>
+                      {{ end }}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="testimonials-1">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4">
+                  <p class="lead"> Trusted by many clients and employers. 
+              </div>
+              <div class="col-sm-8">
+                  <ul class="list-inline social-list">
+                      <li> <img alt="IDEO" class="image--xxs" src="http://res.cloudinary.com/jobdoc/image/upload/t_feature_logo/IDEO_LOGO_2014_RGB_FINAL_vlwlhm.png"> </li>
+                      <li> <img alt="Shyp" class="image--xxs" src="http://res.cloudinary.com/jobdoc/image/upload/t_feature_logo/2504274_Shyp_logo_vc7eok.jpg"> </li>
+                      <li> <img alt="State Department" class="image--xxs" src="http://res.cloudinary.com/jobdoc/image/upload/t_feature_logo/1200px-US_Department_of_State_official_seal.svg_wfd9ad.png"> </li>
+                      <li> <img alt="UBS" class="image--xxs" src="http://res.cloudinary.com/jobdoc/image/upload/t_feature_logo/1200px-UBS_Logo.svg_wtkreu.png"> </li>
+                      <li> <img alt="Bloomberg Philanthropies" class="image--xxs" src="http://res.cloudinary.com/jobdoc/image/upload/t_feature_logo/2X4_BLOO-Purple-1024x319_cmsuxj.png"> </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="text-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-sm-10">
+                  <div class="slider" data-paging="true">
+                      <ul class="slides">
+                          {{ range where .Data.Pages "Section" "testimonial" }}
+                            <li>
+                                <div class="testimonial">
+                                    <blockquote> “{{.Params.quote}}” </blockquote>
+                                    <h5>{{.Params.name}}</h5> <span>{{.Params.role}} — {{.Params.company}}</span> </div>
+                            </li>
+                          {{ end }}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="text-center" id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-9 col-md-8">
+                  <form class="form--inline form-email" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill in all fields correctly."> <span class="h4 inline-block">Hi, I'm</span>
+                      <input type="text" name="Name" placeholder="Full Name" class="validate-required"> <span class="h4 inline-block">and I represent</span>
+                      <input type="text" name="Company" placeholder="Company Name" class="validate-required"> <span class="h4 inline-block">I'm looking for someone to work with us on</span>
+                      <div class="input-select">
+                          <select class="validate-required">
+                              <option selected="selected" value="">Select</option>
+                              <option value="Design">Web Design</option>
+                              <option value="Development">Web Development</option>
+                              <option value="Branding">Branding</option>
+                          </select>
+                      </div> <span class="h4 inline-block">Budget-wise, I am looking to keep around the</span>
+                      <div class="input-select">
+                          <select class="validate-required">
+                              <option selected="selected" value="">Select</option>
+                              <option value="0-5k">&lt; 5,000</option>
+                              <option value="5k-10k">5,000 - 10,000</option>
+                              <option value="10k-20k">10,0000 +</option>
+                          </select>
+                      </div> <span class="h4 inline-block">mark,</span> <span class="h4 inline-block">and I'm hoping to have the project complete around</span>
+                      <input type="text" name="Date" placeholder="Date / Timeframe" class="validate-required"> <span class="h4 inline-block">Contact me via</span>
+                      <input type="email" name="email" placeholder="Email Address" class="validate-required validate-email"> <span class="h4 inline-block">or</span>
+                      <input type="tel" name="Phone" placeholder="Phone Number" class="validate-required"> <span class="h4 inline-block">and we can discuss the project in more detail.</span>
+                      <div>
+                          <button type="submit" class="btn btn--primary type--uppercase">Send Enquiry</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+{{ end }}
