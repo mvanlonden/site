@@ -1047,6 +1047,7 @@ mr = (function (mr, $, window, document){
                     success: function(response) {
                         // Swiftmailer always sends back a number representing number of emails sent.
                         // If this is numeric (not Swift Mailer error text) AND greater than 0 then show success message.
+                        console.log(response);
 
                         submitButton.removeClass('btn--loading');
 
