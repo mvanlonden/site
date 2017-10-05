@@ -3,6 +3,5 @@ languageCode = "en-us"
 title = "Mel"
 
 [params]
-  favicon = ""
   github = "https://github.com/mvanlonden"
   linkedin = "https://www.linkedin.com/in/melchert-van-londen-b6b34b49/"
