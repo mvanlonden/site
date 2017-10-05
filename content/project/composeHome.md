@@ -1,5 +1,5 @@
 ---
-title: Collaboratively designed communities
+title: Collaboratively Designed Communities
 company: composeHome
 image: https://res.cloudinary.com/jobdoc/image/upload/t_project_tile/Fort_Collins_gv6km8.jpg
 date: 2017-09-01
@@ -15,6 +15,8 @@ My partner, Tiffany, and I are looking to buy our first house. After renting in 
 For many years we've talked with our friends about starting a community built for us, by us. We've all read stories like [bestie row](http://lightersideofrealestate.com/around-the-home/architecture/tiny-house-bestie-row) and how great would that be? Quickly we realized that building a house let alone a community is a fairly involved process. 
 
 This vision in conjunction with the prefab house movement makes for some really evocative concepts.
+
+![Compose Home](https://res.cloudinary.com/jobdoc/image/upload/v1507162385/app.composehome.com-_1_hiwyjx.png)
 
 ## Process
 
@@ -43,5 +45,4 @@ Most recently, we're looking to do the development ourselves. After immersing ou
 - Google Analytics
 - Google Domains
 - GSuite
-- Quickbooks
 
