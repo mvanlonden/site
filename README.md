@@ -8,3 +8,7 @@ Hugo and Medium Rare
 brew install hugo
 hugo server -D
 ```
+
+## Deploy
+
+push to master on github
