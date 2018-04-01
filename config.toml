@@ -1,6 +1,6 @@
 baseURL = "https://melvanlonden.com/"
 languageCode = "en-us"
-title = "Mel"
+title = "Mel van Londen"
 
 [params]
   github = "https://github.com/mvanlonden"
